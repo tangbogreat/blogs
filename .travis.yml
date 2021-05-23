@@ -1,6 +1,10 @@
 language: node_js
 node_js: stable
 
+cache:
+  npm: false
+  directories:
+    - node_modules 
 #url: https://tangbogreat.github.io/hexo/
 #root: /hexo/
 # S: Build Lifecycle
