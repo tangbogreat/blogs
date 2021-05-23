@@ -34,18 +34,18 @@ branches:
   only:
     - main
 
-deploy:                        # 部署阶段
-  provider: pages              # 约定 pages 为 GitHub Pages 服务，必须且不可更改
-  name: "tangbogreat"            # 提交者
-  email: "martintang@tencent.com" # 提交者邮箱
-  skip-cleanup: true           # 必须跳过清理，否则过程中生成的文件（要发布的静态资源）会被清理
-  #github-token: $Trcl_Token    # Travis CI 设置 token 名称
-  keep-history: true           # 设置为 false 时，使用 `git push --force` 命令覆盖历史记录
-  on:
-    branch: main             # 仅监听 master 分支的变化，才执行构建
-  target-branch: deploy_new      # 用于存放静态资源的分支
-  local-dir: public            # `hexo generate` 命令生成的静态资源所在路径
-  #fqdn:                       # 自定义域名
+      #deploy:                        # 部署阶段
+      #  provider: pages              # 约定 pages 为 GitHub Pages 服务，必须且不可更改
+      #  name: "tangbogreat"            # 提交者
+      #  email: "martintang@tencent.com" # 提交者邮箱
+      #  skip-cleanup: true           # 必须跳过清理，否则过程中生成的文件（要发布的静态资源）会被清理
+      #  #github-token: $Trcl_Token    # Travis CI 设置 token 名称
+      #  keep-history: true           # 设置为 false 时，使用 `git push --force` 命令覆盖历史记录
+      #  on:
+      #    branch: main             # 仅监听 master 分支的变化，才执行构建
+      #  target-branch: deploy_new      # 用于存放静态资源的分支
+      #  local-dir: public            # `hexo generate` 命令生成的静态资源所在路径
+      #  #fqdn:                       # 自定义域名
 
 env:
  global:
